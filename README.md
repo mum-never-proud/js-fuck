@@ -1,0 +1,2 @@
+# js-fuck
+weird js :)
