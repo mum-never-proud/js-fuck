@@ -1,0 +1,36 @@
+{
+  "name": "js-fuck",
+  "version": "1.0.0",
+  "description": "weird js :)",
+  "main": "fuck-js.js",
+  "scripts": {
+    "build": "parcel build js-fuck.js --global '$f'",
+    "dev": "parcel watch js-fuck.js --global '$f'",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mum-never-proud/js-fuck.git"
+  },
+  "keywords": [
+    "fuck",
+    "js",
+    "hacks",
+    "weird",
+    "compile"
+  ],
+  "author": "mum-never-proud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mum-never-proud/js-fuck/issues"
+  },
+  "homepage": "https://github.com/mum-never-proud/js-fuck#readme",
+  "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@babel/preset-env": "7.10.2",
+    "eslint": "7.1.0",
+    "jest": "26.0.1",
+    "parcel": "1.12.4"
+  }
+}
