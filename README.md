@@ -1,2 +1,5 @@
+# demo
+checkout Checkout out <a href="https://mum-never-proud.github.io/js-fuck/">js-fuck</a>!
+
 # js-fuck
-weird js :)
+reason to love js!

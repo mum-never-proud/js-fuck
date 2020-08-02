@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js-fuck</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet" />
+  <style>
+    html,
+    body {
+      font-family: "Fira Code";
+      background-color: #121212;
+      color: #FB3;
+    }
+
+    h1,
+    h3,
+    h6 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    textarea.form-control, textarea.form-control:focus, textarea.form-control[readonly] {
+      background-color: #222831;
+      border: 1px solid #FB3;
+      color: #FB3;
+      outline: none;
+    }
+
+    .btn-primary:disabled {
+      cursor: not-allowed;
+    }
+
+    footer {
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="display-4 text-center mt-3">js-fuck</p>
+        <p class="text-center font-italic mt-3">reason to love js!</p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <p>Paste/Type a valid JS program</p>
+        <textarea id="input" rows="15" class="form-control" autocomplete="off" placeholder="alert('hello world');">alert('hello world');</textarea>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <button id="convert" class="btn btn-primary">Convert</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <textarea id="output" rows="15" class="form-control" autocomplete="off" readonly></textarea>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <button id="run" class="btn btn-primary" disabled="disabled">Run</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <footer>
+          <p class="text-center font-italic">made with much ❤️</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/mum-never-proud/js-fuck/dist/js-fuck.js"></script>
+  <script>
+    (function () {
+      const input = document.getElementById('input');
+      const output = document.getElementById('output');
+      const run = document.getElementById('run');
+
+      document.getElementById('convert').addEventListener('click', function() {
+        if (input.value) {
+          const compiledOutput = $f.compile(input.value);
+
+          run.removeAttribute('disabled');
+          output.value = compiledOutput.encoded;
+          output.__executable = compiledOutput.executable;
+        } else {
+          run.setAttribute('disabled', 'disabled');
+          output.value = '';
+        }
+      });
+      run.addEventListener('click', function() { eval(output.__executable); });
+    })();
+  </script>
+</body>
+</html>
