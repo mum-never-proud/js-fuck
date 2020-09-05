@@ -4,10 +4,10 @@
   "description": "weird js :)",
   "main": "fuck-js.js",
   "scripts": {
-    "build": "parcel build js-fuck.js --global '$f'",
-    "dev": "parcel watch js-fuck.js --global '$f'",
+    "build": "parcel build js-fuck.js --global '$f' -o js-fuck.min.js",
+    "dev": "parcel watch js-fuck.js --global '$f' -o js-fuck.min.js",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test-coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

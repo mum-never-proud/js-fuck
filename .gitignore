@@ -1,2 +1,4 @@
-node_modules
 .cache
+coverage
+node_modules
+.DS_Store
