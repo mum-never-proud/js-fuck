@@ -2,7 +2,7 @@
   "name": "js-fuck",
   "version": "1.0.0",
   "description": "weird js :)",
-  "main": "./dist/fuck-js.min.js",
+  "main": "./dist/js-fuck.min.js",
   "scripts": {
     "build": "parcel build js-fuck.js --global '$f' -o js-fuck.min.js",
     "dev": "parcel watch js-fuck.js --global '$f' -o js-fuck.min.js",
